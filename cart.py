@@ -6,5 +6,17 @@ def add_to_cart(book):
 
 def show_cart():
     print("Shopping Cart:")
-    for book in cart:
-        print(book["title"], book["price"])
+
+    if not cart:
+        print("Cart is empty")
+    else:
+        for book in cart:
+            print(book["title"], "Rs.", book["price"])
+
+book = {
+    "title": "Python Programming",
+    "price": 500
+}
+
+add_to_cart(book)
+show_cart()
